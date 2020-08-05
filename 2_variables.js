@@ -2,8 +2,8 @@
 // let
 
 // int
-// let age = 32
-// console.log(age)
+let age = 32
+console.log(age)
 
 // floating point
 // let pi = 3.14

@@ -16,7 +16,7 @@ console.log(brad)
 
 
 //////////////////////////////
-// modify object in function
+// pass by reference
 // function login(user) {
 //   user.loggedIn = true
 // }
@@ -26,7 +26,7 @@ console.log(brad)
 
 
 ////////////////////////////////////////////////////////////
-// object with nested object and fn as ksys
+// object with nested object and fn as keys
 // const truck = {
 //   make: 'Toyota',
 //   "model": 'Tacoma',
@@ -45,3 +45,21 @@ console.log(brad)
 // console.log(truck)
 // truck.start()
 // console.log(truck)
+
+////////////////////////////////////
+// prototypes
+// const x = { y: 'z' }
+// console.log(x)
+// console.log(x.toString())
+
+// x.toString = () => 'I am x'
+// console.log(x.toString())
+
+// const y = { z: 0 }
+// console.log(y.toString())
+
+// Object.prototype.toString = () => 'I am an object'
+
+// console.log({}.toString())
+
+// const z = {}

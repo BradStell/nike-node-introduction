@@ -55,5 +55,5 @@ console.log("scout:", scout)
 // john.financialInformation.total = 1000000
 // console.log("john:", john)
 
-// // I'm rich!
+// // How much money does brad have?
 // console.log("brad:", brad)

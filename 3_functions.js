@@ -1,11 +1,11 @@
 // //////////////////////////////////////////
 // // add
-// function add(a, b) {
-//   return a + b
-// }
+function add(a, b) {
+  return a + b
+}
 
-// const count = add(5, 50)
-// console.log(count)
+const count = add(5, 50)
+console.log(count)
 
 // const count2 = add(3, 5.4)
 // console.log(count2)
@@ -53,7 +53,7 @@
 // ///////////////////////////////////
 // // more advanced version
 // function getUserFromDatabase(callbackFunction) {
-//   // does some processing
+//   // does some async processing
 //   callbackFunction('Brad Stell')
 // }
 
@@ -66,3 +66,14 @@
 // getUserFromDatabase(function(username) {
 //   console.log('Hello, ' + username)
 // })
+
+
+////////////////////////////////////////////////////////
+// Function expressions / aka "fat arrow functions"
+// const double = (x) => {
+//   return x * 2
+// }
+
+// const double = (x) => x * 2
+
+// const double = x => x * 2
