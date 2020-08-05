@@ -1,0 +1,66 @@
+1. Explain Node and how it executes JS outside of browser
+  - index.html vs .js file
+    - open index.html file in browser and log hello world
+    - run hello world in node.js
+  - browser console vs node REPL demonstration
+
+2. declaring variables
+  - use let and demonstrate logging different types
+    - let x = 3           // number
+    - let x = 3.14        // number (floating point)
+    - let x = 'three'     // string
+    - let x = true        // boolean
+  - show how in javascript you can reasign a different "type" value to any variable
+    - let x = 3
+      x = 'three'
+      x = true
+  - show use of const
+    - let x = 3
+      x = 'three' // error
+  - talk about how we use linters and typescript to avoid these problems
+
+3. declaring functions
+  - function that adds two numbers
+  - function that prints hello in different language based on if statement
+  - show how leaving off parameters results in undefined but still valid executable code
+
+4. objects
+  - show how to create an object
+  - show how you can add new keys to objects at runtime
+  - show how a function can modify object from calling code
+
+5. arrays
+  - demonstrate creating array with items in it
+  - demonstrate some array methods
+    push, pop, shift
+  - demonstrate mixing types
+
+5.a fancy stuff
+  - function expressions
+  - object keys same as value
+
+6. immutability and copying data
+
+7. module system
+  - commonjs (node)
+
+8. promises async/await
+
+9. destructuring objects and arrays
+
+10. Nodejs api
+  - read/write file
+  - url parsing
+  - streams
+  - crypto
+
+11. 3rd party packages
+
+12. eslint
+
+13. typescript
+
+14. Web server
+  - node.js
+  - express
+  - show others (fastify)
