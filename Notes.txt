@@ -20,11 +20,6 @@
   - objects passed by reference into functions
   - object prototypes
 
-HOF 
-closures
-lexical environments
-classes
-
 5. arrays
   - demonstrate creating array with items in it
   - demonstrate some array methods
@@ -40,6 +35,8 @@ classes
 
 7. module system
   - commonjs (node)
+
+############ Aug 05, 2020 ############# Stopping point ###
 
 8. promises async/await
 
@@ -63,3 +60,11 @@ classes
   - show others (fastify)
 
 15. hoisting?
+
+## add to curriculum
+HOF 
+closures
+lexical environments
+classes
+front end frameworks
+lambda
