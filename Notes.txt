@@ -20,6 +20,11 @@
   - objects passed by reference into functions
   - object prototypes
 
+HOF 
+closures
+lexical environments
+classes
+
 5. arrays
   - demonstrate creating array with items in it
   - demonstrate some array methods
