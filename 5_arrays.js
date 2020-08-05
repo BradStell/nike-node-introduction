@@ -30,7 +30,7 @@ console.log(numbers)
 // console.log(numbers)
 
 // const isEven = (x) => x % 2 === 0
-// const evens = numbers.map(isEven)
+// const evens = numbers.filter(isEven)
 // console.log(evens)
 
 

@@ -26,7 +26,7 @@
     push, pop, shift
   - demonstrate mixing types
 
-5.a es6 fancy stuff
+5.a es6 fancy features
   - function expressions
   - object keys same as value
   - string concatenation `${}`
@@ -56,3 +56,5 @@
   - node.js
   - express
   - show others (fastify)
+
+15. hoisting?
