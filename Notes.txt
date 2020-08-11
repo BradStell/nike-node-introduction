@@ -44,9 +44,12 @@
 
 10. Nodejs api
   - read/write file
-  - url parsing
-  - streams
+  - buffers
   - crypto
+  - url parsing
+  - http
+    - request
+    - server
 
 11. 3rd party packages
 

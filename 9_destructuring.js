@@ -1,18 +1,18 @@
 ////////////////////////////
 // Object / Array destructuring
 
-// const vector = {
-//   x: 7,
-//   y: 24,
-//   z: 1
-// }
+const vector = {
+  x: 7,
+  y: 24,
+  z: 1
+}
 
-// // normal object printing
-// console.log(`x: ${vector.x}, y: ${vector.y}, z: ${vector.z}`)
+// normal object printing
+console.log(`x: ${vector.x}, y: ${vector.y}, z: ${vector.z}`)
 
 // // object destructuring
-// const { x, y } = vector
-// console.log(`x: ${vector.x}, y: ${vector.y}`)
+// const { x, y, z } = vector
+// console.log(`x: ${vector.x}, y: ${vector.y}, z: ${vector.z}`)
 
 // // object destructuring in function
 // function sayHello(user) {
