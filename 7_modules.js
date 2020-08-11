@@ -1,3 +1,5 @@
-const { add } = require('./7_math')
+const math = require('./7_math')
 
-console.log(add(7, 8))
+console.log(math.add(7, 8))
+
+console.log(math.subtract(7, 8))
