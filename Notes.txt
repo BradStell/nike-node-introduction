@@ -52,6 +52,12 @@
     - server
 
 11. 3rd party packages
+  - initilizing new project
+  - package.json
+  - package-lock.json
+  - npm
+  - installing dependencies
+  - .gitignore
 
 12. eslint
 
