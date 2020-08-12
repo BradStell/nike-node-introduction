@@ -15,7 +15,7 @@ fs.readFile('10_string_file.txt', (err, data) => {
   console.log(data)
 
   // convert buffer to utf-8 characters
-  console.log(data.toString('utf-8'))
+  // console.log(data.toString('utf-8'))
 })
 
 // // read .json file
@@ -32,11 +32,11 @@ fs.readFile('10_string_file.txt', (err, data) => {
 
 //   // Demonstrage that `dogs` is a javascript array
 //   // get the names of all cream dogs
-//   const creamDogNames = dogs
-//     .filter(dog => dog.color === 'Cream')
-//     .map(dog => dog.name)
+//   // const creamDogNames = dogs
+//   //   .filter(dog => dog.color === 'Cream')
+//   //   .map(dog => dog.name)
   
-//   console.log(creamDogNames)
+//   // console.log(creamDogNames)
 // })
 
 
@@ -53,21 +53,26 @@ fs.readFile('10_string_file.txt', (err, data) => {
 // const buf = Buffer.alloc(4);
 // console.log(buf)
 
-// little endian int32
-// const buf = Buffer.from([0, 0, 1, 13]) // 269 little endian bytes
-// const number = buf.readInt32BE()
-// console.log(number)
+// big endian int32
+
+// 0000 0000   0000 0000   0000 0001   0000 1101
+
+// const buf = Buffer.from([0, 0, 1, 13]) // 269 big endian bytes
+// const numberBE = buf.readInt32BE()
+// const numberLE = buf.readInt32LE()
+// console.log(numberBE)
+// console.log(numberLE)
 
 ///////////////////////////////////
 // Crypto
-// const crypto = require('crypto')
+const crypto = require('crypto')
 
 // // Create SHA256 hash
 // const hash = crypto.createHash('sha256')
 // hash.update('Brad Stell')
 // console.log(hash.digest())
-// // console.log(hash.digest('hex'))
-// // console.log(hash.digest('base64'))
+// console.log(hash.digest('hex'))
+// console.log(hash.digest('base64'))
 
 // chain above example
 // const hash = crypto
@@ -87,10 +92,11 @@ fs.readFile('10_string_file.txt', (err, data) => {
 // // create cipher
 // const cipher = crypto.createCipheriv('aes-192-cbc', key, iv)
 // // encrpyt some text
-// let encrypted = cipher.update('some text to encrpyt', 'utf8', 'hex')
-// encrypted += cipher.final('hex')
+// let encrypted = cipher.update('some text to encrpyt', 'utf8', 'base64')
+// encrypted += cipher.final('base64')
 // console.log(encrypted)
 
+// decipher text
 
 ///////////////////////////////////
 // URL
@@ -101,7 +107,7 @@ fs.readFile('10_string_file.txt', (err, data) => {
 
 ////////////////////////////////
 // http
-const http = require('http')
+// const http = require('http')
 
 // // make get request
 // const options = {

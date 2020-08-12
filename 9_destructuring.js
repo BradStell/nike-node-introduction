@@ -10,17 +10,17 @@ const vector = {
 // normal object printing
 console.log(`x: ${vector.x}, y: ${vector.y}, z: ${vector.z}`)
 
-// // object destructuring
-// const { x, y, z } = vector
-// console.log(`x: ${vector.x}, y: ${vector.y}, z: ${vector.z}`)
+// object destructuring
+const { x, y, z: zed } = vector
+console.log(`x: ${x}, y: ${y}, z: ${zed}`)
 
 // // object destructuring in function
 // function sayHello(user) {
 //   console.log(`Welcome, ${user.username} 🌵`)
 // }
-// // function sayHello({ username }) {
-// //   console.log(`Welcome, ${username} 🌵`)
-// // }
+// function sayHello({ username }) {
+//   console.log(`Welcome, ${username} 🌵`)
+// }
 // sayHello({ username: 'brad.stell@nike.com' })
 
 //////////////////////////////
@@ -37,7 +37,7 @@ console.log(`x: ${vector.x}, y: ${vector.y}, z: ${vector.z}`)
 // const utils = require('./9_module')
 // console.log(utils.add(4, 4))
 
-// destructure package
+// // destructure package
 // const { add, subtract } = require('./9_module')
 // console.log(add(4, 4))
 // console.log(subtract(4, 4))
