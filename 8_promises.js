@@ -164,10 +164,15 @@ app()
 async function exampleWithAsyncAwait() {
   try {
     const user = await getUserAsync('1234')
-    const settings = await getUserSettingsAsync(user.id)
-    const success = await setLoggedInTime(user.id, settings.lastLoginTime)
-    const todos = await getUserTodosAsync(user.id)
-    await doSomethingWithTodos()
+
+    const promises = [
+      getUserSettingsAsync(user.id),
+      setLoggedInTime(user.id),
+      getUserTodosAsync(user.id)
+    ]
+
+    const results = await Promise.allSettled(promises)
+
   } catch (err) {
     handleErrors(err)
   }

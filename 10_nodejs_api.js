@@ -2,21 +2,21 @@
 
 ////////////////////////////////////////////////////////////
 // File System
-const fs = require('fs')
+// const fs = require('fs')
 
 // read .txt file
-fs.readFile('10_string_file.txt', (err, data) => {
-  if (err) {
-    console.error(err.toString())
-    process.exit(1)
-  }
+// fs.readFile('10_string_file.txt', (err, data) => {
+//   if (err) {
+//     console.error(err.toString())
+//     process.exit(1)
+//   }
 
-  // data is a Buffer
-  console.log(data)
+//   // data is a Buffer
+//   console.log(data)
 
-  // convert buffer to utf-8 characters
-  // console.log(data.toString('utf-8'))
-})
+//   // convert buffer to utf-8 characters
+//   console.log(data.toString('utf-8'))
+// })
 
 // // read .json file
 // fs.readFile('10_json_data.json', (err, data) => {
@@ -32,11 +32,11 @@ fs.readFile('10_string_file.txt', (err, data) => {
 
 //   // Demonstrage that `dogs` is a javascript array
 //   // get the names of all cream dogs
-//   // const creamDogNames = dogs
-//   //   .filter(dog => dog.color === 'Cream')
-//   //   .map(dog => dog.name)
+//   const creamDogNames = dogs
+//     .filter(({color}) => color === 'Cream')
+//     .map(({name}) => name)
   
-//   // console.log(creamDogNames)
+//   console.log(creamDogNames)
 // })
 
 
@@ -70,8 +70,8 @@ const crypto = require('crypto')
 // // Create SHA256 hash
 // const hash = crypto.createHash('sha256')
 // hash.update('Brad Stell')
-// console.log(hash.digest())
-// console.log(hash.digest('hex'))
+// // console.log(hash.digest())
+// // console.log(hash.digest('hex'))
 // console.log(hash.digest('base64'))
 
 // chain above example
@@ -107,9 +107,9 @@ const crypto = require('crypto')
 
 ////////////////////////////////
 // http
-// const http = require('http')
+const http = require('http')
 
-// // make get request
+// make get request
 // const options = {
 //   hostname: 'dummy.restapiexample.com',
 //   port: 80,

@@ -1,18 +1,16 @@
-// async/await
-
 function getUserAsync() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve({ username: 'Brad' })
-    }, 500)
+  return new Promise((resolve, reject) => {
+    // resolve({ username: 'Brad' })
+    reject('This failed for some reason')
   })
 }
 
 async function app() {
-  console.log('before get user')
-  const user = await getUserAsync()
-  console.log('after get user')
-  console.log(user)
+  try {
+    const user = await getUserAsync()
+    console.log(user)
+  } catch (err) {
+    console.log(err)
+  }
 }
 app()
-console.log('I will run before user returns')
