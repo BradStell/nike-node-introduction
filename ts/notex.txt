@@ -1,0 +1,48 @@
+1. Intro to TypeScript in single file
+  - install typescript `npm install typescript -g`
+  - show TS is subset of JS by compiling a JS file
+  - basic types:
+      * number
+      * string
+      * boolean
+      * arrays
+  - show js doc and how vs code builds fn descriptions
+  - custom types
+  - duck typing (interface inferrence)
+  - nullables
+  - errors at declared type OR call site of fn
+  - enums
+    * strings
+    * 'this' | 'that'
+    * enum
+  - try to demo Buffer type - leads to error - transition to tsc project
+  - explain typings files .d.ts
+2. Create npm and typescript project
+  - tsc --init
+  - npm init -y
+  - edit tsconfig.json file to have src/ and build/ dirs
+  - show adding "start" and "build" commands to package.json
+  - install @types/node - continue with Buffer demo
+  - showed package-lock, node_modules with @types/node in it
+  - switch targets: es6
+  - change
+      * declaration
+      * remove comments
+  - demo installing specific version in package `npm install --save-dev typescript` `npx tsc`
+  - modules
+  - tsconfig
+    * noUnusedLocals
+
+## If time ##
+3. Use with 3rd party package
+  - install express
+  - install @types/express --save-dev
+  - create express app with types
+  - create router
+    - create routes file
+      * GET / - inline
+      * POST / - in handler file typed
+  - use express.json() to log body for POST
+  - create custom type
+  - create GET with params
+    * add to handlers
