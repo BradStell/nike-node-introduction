@@ -1,18 +1,18 @@
 ///////////////////////////////////////
 // this and lexical environments
 
-const dog = {
-  name: 'Scout',
-  age: 1,
-  sayHi: function() {
-    console.log(`Hello, my name is ${name} and I am ${age} year old`)
-  }
-}
+// const dog = {
+//   name: 'Scout',
+//   age: 1,
+//   sayHi: () => {
+//     console.log(`Hello, my name is ${this.name} and I am ${this.age} year old`)
+//   }
+// }
 
-dog.sayHi()
+// dog.sayHi()
 
 
-// const EventEmitter = require('events')
+const EventEmitter = require('events')
 
 // const myEmitter = new EventEmitter()
 // myEmitter.on('someEvent', () => {
@@ -21,9 +21,10 @@ dog.sayHi()
 // myEmitter.emit('someEvent')
 
 
-// const logUserIn = (user) => {
+// function logUserIn (user) {
 //   console.log(user, 'logged in')
-//   // this.emit('fetchData')
+//   console.log(this)
+//   this.emit('fetchData')
 // }
 
 // const myEmitterWithParams = new EventEmitter()
@@ -32,23 +33,23 @@ dog.sayHi()
 
 
 
-// const person = {
-//   name: 'Brad',
-//   logIn: function(time) {
-//     this.lastLoggedInTime = time
-//   },
-//   lastLoggedInTime: null
-// }
+const person = {
+  name: 'Brad',
+  logIn: function(time) {
+    this.lastLoggedInTime = time
+  },
+  lastLoggedInTime: null
+}
 
 // person.logIn(new Date())
 // console.log(person.lastLoggedInTime)
 
-// // const loginEmitter = new EventEmitter()
+const loginEmitter = new EventEmitter()
 
-// // loginEmitter.on('loggedIn', person.logIn)
-// // loginEmitter.emit('loggedIn', '1234')
+loginEmitter.on('loggedIn', (val) => person.logIn(val))
+loginEmitter.emit('loggedIn', '666666')
 
-// // console.log(person.lastLoggedInTime)
+console.log(person.lastLoggedInTime)
 
 
 

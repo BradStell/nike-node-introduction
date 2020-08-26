@@ -2,12 +2,12 @@
 // Higher Order Functions
 //  * A function that takes a function as an argument or returns a function
 
-const multiply = (a, b) => a * b
+// const multiply = (a, b) => a * b
 
-const seconds = 5
-setTimeout(() => {
-  console.log(`Waited ${seconds} seconds`)
-}, multiply(seconds, 1000))
+// const waitTime = 5
+// setTimeout(() => {
+//   console.log(`Waited ${waitTime} seconds`)
+// }, multiply(waitTime, 1000))
 
 
 
@@ -20,10 +20,10 @@ setTimeout(() => {
 // // multiplies it's parameter by 1000
 // const secToMilli = multiply(1000)
 
-// const seconds = 5
+// const waitTime = 5
 // setTimeout(() => {
-//   console.log(`Waited ${seconds} seconds`)
-// }, secToMilli(seconds))
+//   console.log(`Waited ${waitTime} seconds`)
+// }, secToMilli(waitTime))
 
 
 
@@ -40,7 +40,7 @@ setTimeout(() => {
 
 // console.log(gt3vals)
 
-// // Point free syntax
+// // // Point free syntax
 // array.filter(val => gt3(val))
 // array.filter(gt3)
 
@@ -61,11 +61,17 @@ setTimeout(() => {
 
 
 // build example for executing fn at later date
-// const printLoggedInTime = (loggedInTime, dog) => {
-//   console.log(`Dog ${dog} logged in at ${loggedInTime}`)
-// }
+const printLoggedInTime = (loggedInTime) => (dog) => () => {
+  console.log(`Dog ${dog} logged in at ${loggedInTime}`)
+}
 
-// const dogs = [ 'Ranger', 'Scout' ]
+const dogs = [ 'Ranger', 'Scout' ]
 
-// const currentTime = new Date().toISOString()
-// dogs.forEach(dog => printLoggedInTime(currentTime, dog))
+const currentTime = new Date().toISOString()
+const dogFns = dogs.map(printLoggedInTime(currentTime))
+console.log(dogFns)
+
+setTimeout(() => {
+  console.log(new Date().toISOString())
+  dogFns.forEach(dogFn => dogFn())
+}, 3000)
