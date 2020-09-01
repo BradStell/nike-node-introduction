@@ -85,104 +85,106 @@
 ////////////////////////////////////
 // .forEach
 
+// imperative
 // for each loop iteration
 const names = ['Ranger', 'Scout']
 for (let i = 0; i < names.length; i++) {
   console.log(`Hello, ${names[i]}`)
 }
 
+// declarative
 // es6 forEach
 names.forEach(name => console.log(`Hello, ${name}`))
 
+// ////////////////////////////////////
+// // .map
+// const arr = [1, 2, 3, 4, 5]
+// const double = x => x * 2
 
-////////////////////////////////////
-// .map
-const arr = [1, 2, 3, 4, 5]
-
-// in place update
-for (let i = 0; i < arr.length; i++) {
-  arr[i] = arr[i] * 2
-}
-console.log('in place:', arr)
-
-// insert into new array
-const results = []
-for (let i = 0; i < arr.length; i++) {
-  results.push(arr[i] * 2)
-}
-console.log('in new array', results)
-
-// es6 map
-const res = arr.map(i => i * 2)
-console.log('map', res)
+// // for loop iteration
+// const results = []
+// for (let i = 0; i < arr.length; i++) {
+//   results.push(double(arr[i]))
+// }
+// console.log('map for loop', results)
 
 
-////////////////////////////////////
-// .filter
-
-const students = [
-  {
-    name: 'Ranger',
-    grade: 89.5
-  },
-  {
-    name: 'Scout',
-    grade: 60
-  },
-  {
-    name: 'Charlie',
-    grade: 99.4
-  },
-  {
-    name: 'Pumpkin',
-    grade: 72
-  }
-]
-
-const passingStudents = []
-for (let i = 0; i < students.length; i++) {
-  if (students[i].grade >= 80) {
-    passingStudents.push(students[i].name)
-  }
-}
-console.log('passing students', passingStudents)
-
-// Using es6 filter
-const passing = students.filter(s => s.grade >= 80).map(s => s.name)
-console.log('passing students 2', passing)
+// // es6 map
+// const res = arr.map(double)
+// console.log('map', res)
 
 
-////////////////////////////////////
-// .reduce
-const nums = [10, 20, 30, 40]
+// ////////////////////////////////////
+// // .filter
 
-// for-loop
-let total = 0
-for (let i = 0; i < nums.length; i++) {
-  total += nums[i]
-}
-console.log('total', total)
+// const students = [
+//   {
+//     name: 'Ranger',
+//     grade: 89.5
+//   },
+//   {
+//     name: 'Scout',
+//     grade: 60
+//   },
+//   {
+//     name: 'Charlie',
+//     grade: 99.4
+//   },
+//   {
+//     name: 'Pumpkin',
+//     grade: 72
+//   }
+// ]
 
-// es6 reduce
-const sum = nums.reduce((total, current) => total + current, 0)
-console.log('sum', sum)
+// // imperative
+// const passingStudents = []
+// for (let i = 0; i < students.length; i++) {
+//   if (students[i].grade >= 80) {
+//     passingStudents.push(students[i])
+//   }
+// }
+// console.log('passing students', passingStudents)
 
 
-////////////////////////////////////
-// .some
-const data = [10, 30, 50, 5, -6]
+// // declarative
+// // Using es6 filter
+// const passing = students.filter(s => s.grade >= 80)
+// console.log('passing students 2', passing)
 
-// imperative
-let areAnyNegative = false
-for (let i = 0; i < data.length; i++) {
-  if (data[i] < 0) {
-    areAnyNegative = true
-    break
-  }
-}
-console.log('areAnyNegative', areAnyNegative)
 
-// functional
-const lessThanZero = x => x < 0
-const areNegatives = data.some(lessThanZero)
-console.log('areNegatives', areNegatives)
+// ////////////////////////////////////
+// // .reduce
+// const nums = [10, 20, 30, 40]
+
+// // for-loop
+// let total = 0
+// for (let i = 0; i < nums.length; i++) {
+//   total += nums[i]
+// }
+// console.log('total', total)
+
+
+// // es6 reduce
+// const sum = nums.reduce((total, current) => total + current, 0)
+// console.log('sum', sum)
+
+
+// ////////////////////////////////////
+// // .some
+// const data = [10, 30, 50, 5, -6]
+
+// // imperative
+// let areAnyNegative = false
+// for (let i = 0; i < data.length; i++) {
+//   if (data[i] < 0) {
+//     areAnyNegative = true
+//     break
+//   }
+// }
+// console.log('areAnyNegative', areAnyNegative)
+
+
+// // functional
+// const lessThanZero = x => x < 0
+// const areNegatives = data.some(lessThanZero)
+// console.log('areNegatives', areNegatives)
