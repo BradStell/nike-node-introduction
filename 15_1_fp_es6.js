@@ -2,10 +2,10 @@
   Functional programming favors
   • Pure functions
   • Function composition
-  • Avoid shared state
-  • Avoid mutating state
-  • Avoid side effects
-  • Declarative vs imperative
+  • Avoid shared state (pure)
+  • Avoid mutating state (immutability)
+  • Avoid side effects (pure)
+  • Declarative vs imperative (what vs how)
 
   The problem with shared state is that in order to understand the
   effects of a function, you have to know the entire history of every
@@ -30,6 +30,9 @@
    state- process, and extreme late-binding of all things.” ∼ Alan Kay
    
   “Favor object composition over class inheritance.” ∼ Gang of Four, “Design Patterns”
+  "has a" over "is a"
+    a truck has an engine not is a thing that has an engine
+      - how would you make this electronic?
 
    Functions are good abstractions bc
    • Composable
@@ -50,6 +53,26 @@
     • Polymorphism
     • Static types
     • Recognizing a class as a “type”
+
+  Issues with Class Inheritance
+    • The tight coupling problem:
+        Because child classes are dependent on the implementation of the parent class,
+        class inheritance is the tightest coupling available in object oriented design.
+    • The fragile base class problem:
+        Due to tight coupling, changes to the base class can potentially
+        break a large number of descendant classes – potentially in code managed by third parties. The
+        author could break code they’re not aware of.
+    • The inflexible hierarchy problem:
+        With single ancestor taxonomies, given enough time and
+        evolution, all class taxonomies are eventually wrong for new use-cases.
+    • The duplication by necessity problem:
+        Due to inflexible hierarchies, new use cases are often
+        implemented by duplication, rather than extension, leading to similar classes which are unexpectedly divergent.
+        Once duplication sets in, it’s not obvious which class new classes should descend from, or why.
+    • The gorilla/banana problem:
+        “...the problem with object-oriented languages is they’ve got all
+        this implicit environment that they carry around with them. You wanted a banana but what you got
+        was a gorilla holding the banana and the entire jungle.” ∼ Joe Armstrong, “Coders at Work”
 */
 
 
