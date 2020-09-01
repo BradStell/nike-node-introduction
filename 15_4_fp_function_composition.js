@@ -135,8 +135,13 @@ console.log('Days', daysAgain)
 const R = require('ramda')
 
 const expiringInDays = (expirationDays, createdDate) => {
+  // get expiration date in milliseconds since epoch
   const expirationDate = createdDate.getTime() + daysToMilliseconds(expirationDays)
+
+  // get current date in milliseconds since epoch
   const now = new Date().getTime()
+
+  // convert answer back to days
   return milliSecondsToDays(expirationDate - now)
 }
 
@@ -147,7 +152,7 @@ const expirationMessage = (expiresInDays) =>
       ? 'Expiring in less than 1 day'
       : '')
 
-const generateExpiryMessage = R.compose(expirationMessage, Math.round, expiringInDays)
+const generateExpiryMessage = R.compose(expirationMessage, expiringInDays)
 
 console.log( generateExpiryMessage(7, new Date('8/30/2020')) )
 
