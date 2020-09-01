@@ -59,7 +59,7 @@
 
 14. hoisting
 
-Typescript
+Typescript in ts directory
 
 15. functional programming
   - es6 functions
@@ -85,9 +85,6 @@ Typescript
 
 
 ## add to curriculum
-HOF 
-closures
-lexical environments
 classes
 front end frameworks
 lambda
