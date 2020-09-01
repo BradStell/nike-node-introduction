@@ -1,6 +1,22 @@
 import utils from './utils'
 import { ApplicationUser, AppRole } from './types'
 
+////////////////////
+const add = (a, b) => a + b
+
+const c = add(3, 4)
+const d = add(3, '8')
+const e = add([], [])
+const f = add({}, [])
+const g = add(true, 8)
+
+console.log(c)
+console.log(d)
+console.log(e)
+console.log(f)
+console.log(g)
+/////////////////////
+
 const c = utils.add(4, 5)
 console.log(c)
 
@@ -22,7 +38,7 @@ const logUserIn = (user: ApplicationUser): void => {
   console.log(`User ${user.firstName} has logged in`)
 
   if (user.role === AppRole.ADMIN) {
-    // something special
+    console.log(`Special access for user ${user.name}`)
   }
 }
 

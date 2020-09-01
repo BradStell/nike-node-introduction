@@ -51,24 +51,38 @@
     - request
     - server
 
-11. 3rd party packages
-  - initilizing new project
-  - package.json
-  - package-lock.json
-  - npm
-  - installing dependencies
-  - .gitignore
+11. HOF
 
-12. eslint
+12. closures
 
-13. typescript
+13. this
 
-14. Web server
-  - node.js
-  - express
-  - show others (fastify)
+14. hoisting
 
-15. hoisting?
+Typescript
+
+15. functional programming
+  - es6 functions
+    * forEach
+    * map
+    * filter
+    * reduce
+    * some
+  - pure fns
+    - side effects
+  - immutability
+  - function composition
+  - currying
+  - partial application
+
+  ---- part 2?
+  - lenses
+  - functor
+  - monad
+  - mixins
+  - composition harder with classes
+
+
 
 ## add to curriculum
 HOF 
@@ -77,3 +91,4 @@ lexical environments
 classes
 front end frameworks
 lambda
+eslint

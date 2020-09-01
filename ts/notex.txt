@@ -1,6 +1,8 @@
 1. Intro to TypeScript in single file
   - install typescript `npm install typescript -g`
+  - CREATE NEW DIRECTORY FOR WORK
   - show TS is subset of JS by compiling a JS file
+  - do add fn in JS no types and call bad ways
   - basic types:
       * number
       * string
@@ -17,21 +19,23 @@
     * enum
   - try to demo Buffer type - leads to error - transition to tsc project
   - explain typings files .d.ts
+
+
 2. Create npm and typescript project
   - tsc --init
   - npm init -y
   - edit tsconfig.json file to have src/ and build/ dirs
   - show adding "start" and "build" commands to package.json
+  - install project typescript
   - install @types/node - continue with Buffer demo
   - showed package-lock, node_modules with @types/node in it
   - switch targets: es6
-  - change
+  - change tsconfig
       * declaration
       * remove comments
-  - demo installing specific version in package `npm install --save-dev typescript` `npx tsc`
+      * noUnusedLocals
   - modules
-  - tsconfig
-    * noUnusedLocals
+
 
 ## If time ##
 3. Use with 3rd party package
