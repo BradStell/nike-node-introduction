@@ -102,12 +102,12 @@ for (let i = 0; i < names.length; i++) {
   console.log(`Hello, ${names[i]}`)
 }
 
-// declarative
-// es6 forEach
+// // declarative
+// // es6 forEach
 // names.forEach(name => console.log(`Hello, ${name}`))
 
-// ////////////////////////////////////
-// // .map
+////////////////////////////////////
+// .map
 // const arr = [1, 2, 3, 4, 5]
 
 // // for loop imperative way
@@ -118,8 +118,8 @@ for (let i = 0; i < names.length; i++) {
 // console.log('map for loop', results)
 
 
-// // es6 map
-// const res = arr.map(a => a * 2)
+// // // es6 map
+// const res = arr.map(x => x * 2)
 // console.log('map', res)
 
 
@@ -154,9 +154,8 @@ for (let i = 0; i < names.length; i++) {
 // }
 // console.log('passing students', passingStudents)
 
-
-// // declarative
-// // Using es6 filter
+// // // declarative
+// // // Using es6 filter
 // const passing = students.filter(s => s.grade >= 80)
 // console.log('passing students 2', passing)
 
@@ -173,7 +172,7 @@ for (let i = 0; i < names.length; i++) {
 // console.log('total', total)
 
 
-// // // es6 reduce
+// // // // es6 reduce
 // const sum = nums.reduce((total, current) => total + current, 0)
 // console.log('sum', sum)
 
@@ -193,6 +192,6 @@ for (let i = 0; i < names.length; i++) {
 // console.log('areAnyNegative', areAnyNegative)
 
 
-// // // functional
+// // // // functional
 // const areNegatives = data.some(x => x < 0)
 // console.log('areNegatives', areNegatives)

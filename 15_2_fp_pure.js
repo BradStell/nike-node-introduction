@@ -10,10 +10,10 @@ const sayHi = name => console.log(`Hello ${name}`)
 sayHi('Brad') // not pure
 
 
-// //////////////////////////////
+// // //////////////////////////////
 // const highpass = (cutoff, value) => value >= cutoff
 
-// // alwasy the same result with the same input
+// // always the same result with the same input
 // highpass(5, 5) // true
 // highpass(5, 5) // true
 // highpass(5, 5) // true
