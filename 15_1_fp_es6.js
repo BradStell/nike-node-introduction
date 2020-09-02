@@ -17,8 +17,17 @@
   • Declarative programs abstract the flow control process (the how gets abstracted away),
     and instead spend lines of code describing the data flow: What to do.
 
+  Functions are good abstractions bc
+   • Composable
+   • Reusable
+   • Independent
+   • Concise
+   • Simple
+
   “Sometimes, the elegant implementation is just a function. Not a method. Not a class.
    Not a framework. Just a function.” ∼ John Carmack (Id Software, Oculus VR)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   “I made up the term ‘object-oriented’, and I can tell you I didn’t have C++ in mind.”
     ∼ Alan Kay, OOPSLA ‘97
@@ -33,13 +42,6 @@
   "has a" over "is a"
     a truck has an engine not is a thing that has an engine
       - how would you make this electronic?
-
-   Functions are good abstractions bc
-   • Composable
-   • Reusable
-   • Independent
-   • Concise
-   • Simple
 
   What is essential to OOP?
     • Encapsulation
@@ -78,39 +80,46 @@
 
 
 ////////////////////////////////////////////////////////////////////////
-///////// ES6 ECMASCRIPT 2015 FUNCTIONS
+///////// ES6 | ECMASCRIPT 2015 FUNCTIONS
 ////////////////////////////////////////////////////////////////////////
 
+/*
+  Array.prototype.forEach
+  Array.prototype.map
+  Array.prototype.filter
+  Array.prototype.reduce
+  Array.prototype.some
+*/
 
 ////////////////////////////////////
 // .forEach
 
+const names = ['Ranger', 'Scout']
+
 // imperative
 // for each loop iteration
-const names = ['Ranger', 'Scout']
 for (let i = 0; i < names.length; i++) {
   console.log(`Hello, ${names[i]}`)
 }
 
 // declarative
 // es6 forEach
-names.forEach(name => console.log(`Hello, ${name}`))
+// names.forEach(name => console.log(`Hello, ${name}`))
 
 // ////////////////////////////////////
 // // .map
 // const arr = [1, 2, 3, 4, 5]
-// const double = x => x * 2
 
-// // for loop iteration
+// // for loop imperative way
 // const results = []
 // for (let i = 0; i < arr.length; i++) {
-//   results.push(double(arr[i]))
+//   results.push(arr[i] * 2)
 // }
 // console.log('map for loop', results)
 
 
 // // es6 map
-// const res = arr.map(double)
+// const res = arr.map(a => a * 2)
 // console.log('map', res)
 
 
@@ -153,7 +162,7 @@ names.forEach(name => console.log(`Hello, ${name}`))
 
 
 // ////////////////////////////////////
-// // .reduce
+// // .reduce or "fold"
 // const nums = [10, 20, 30, 40]
 
 // // for-loop
@@ -164,7 +173,7 @@ names.forEach(name => console.log(`Hello, ${name}`))
 // console.log('total', total)
 
 
-// // es6 reduce
+// // // es6 reduce
 // const sum = nums.reduce((total, current) => total + current, 0)
 // console.log('sum', sum)
 
@@ -173,7 +182,7 @@ names.forEach(name => console.log(`Hello, ${name}`))
 // // .some
 // const data = [10, 30, 50, 5, -6]
 
-// // imperative
+// // // imperative
 // let areAnyNegative = false
 // for (let i = 0; i < data.length; i++) {
 //   if (data[i] < 0) {
@@ -184,7 +193,6 @@ names.forEach(name => console.log(`Hello, ${name}`))
 // console.log('areAnyNegative', areAnyNegative)
 
 
-// // functional
-// const lessThanZero = x => x < 0
-// const areNegatives = data.some(lessThanZero)
+// // // functional
+// const areNegatives = data.some(x => x < 0)
 // console.log('areNegatives', areNegatives)
